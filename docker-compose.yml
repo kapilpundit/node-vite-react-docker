@@ -28,6 +28,9 @@ services:
       - "5173:5173"
     depends_on:
       - backend
+    volumes:
+      - ./frontend:/app  # Ensure the local frontend code syncs with the container
+      - /app/node_modules  # Prevent overwriting node_modules
 
 volumes:
   mongodb_data:
