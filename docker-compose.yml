@@ -3,7 +3,11 @@ services:
     build: ./backend
     ports:
       - "5000:5000"
+    volumes:
+      - ./backend:/app  # Mount local backend folder to container
+      - /usr/src/app/node_modules  # Prevent overwriting node_modules
     environment:
+      - NODE_ENV=development
       - MONGO_URI=mongodb://database:27017/mydb
     depends_on:
       - database
