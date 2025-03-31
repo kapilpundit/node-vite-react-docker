@@ -1,6 +1,5 @@
-import { useState } from "react";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,8 +7,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound"; // Import the NotFound page
 
 function App() {
-  console.log("App Loaded123... ", new Date().toISOString());
-
   return (
     <>
       <Layout>
