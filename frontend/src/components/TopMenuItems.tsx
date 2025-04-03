@@ -10,15 +10,17 @@ const TopMenuItems = ({ onClick }: { onClick?: () => void }) => {
 
   return (
     <>
-      {menuLinks.map((item) => (
-        <li
-          key={item.path}
-          onClick={onClick}
-          className="block px-3 py-3 rounded-md text-blue-600 hover:bg-blue-600 hover:!text-white transition duration-300"
-        >
-          <Link to={item.path}>{item.label}</Link>
-        </li>
-      ))}
+      {
+        menuLinks.map((item) => {
+          return (<li
+            key={item.path}
+            onClick={onClick}
+            className="block px-3 py-3 rounded-md text-blue-600 hover:bg-blue-600 hover:!text-white transition duration-300"
+          >
+            <Link to={item.path}>{item.label}</Link>
+          </li>)
+        }
+      )}
     </>
   );
 };

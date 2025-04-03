@@ -5,7 +5,11 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       {/* Hero Section */}
-      <Banner title="Welcome to Our Website" longText="Explore our services and offerings" />
+      <Banner
+        title="Welcome to Our Website"
+        subtitle=""
+        longText="Explore our services and offerings"
+      />
 
       {/* Features Section */}
       <Features />

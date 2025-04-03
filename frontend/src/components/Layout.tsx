@@ -1,14 +1,9 @@
-import { ReactNode, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { ReactNode, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"; // Import the menu icon
 import TopMenuItems from "./TopMenuItems";
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

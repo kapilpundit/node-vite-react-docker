@@ -1,3 +1,4 @@
+import React from "react";
 import bannerImage from "../assets/banner.jpg";
 
 interface BannerProps {
@@ -6,7 +7,8 @@ interface BannerProps {
   longText?: string;
 }
 
-const Banner = ({ title, subtitle, longText }: BannerProps) => {
+const Banner: React.FC<BannerProps> = ({ title, subtitle = '', longText }) => {
+  console.log(subtitle)
   return (
     <>
       {/* <section className="w-full py-20 min-h-[400px] bg-blue-600 text-white"> */}
