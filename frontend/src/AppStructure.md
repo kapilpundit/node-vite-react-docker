@@ -1,0 +1,14 @@
+App.tsx
+    - Layout.tsx (This renders children like this -> <main>{children}</main>)
+        - Routes (This is react-router-dom.Routes)
+            - <Route path="/" element={<Home />} />
+                - Banner
+                - Features
+            - <Route path="/about" element={<About />} />
+                - Banner
+                - Features
+            - <Route path="/contact" element={<Contact />} />
+                - Banner
+                - Features
+            - <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
+        - TopMenuItems

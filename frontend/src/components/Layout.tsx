@@ -11,7 +11,7 @@ const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
       {/* Navbar */}
       <nav className="bg-white shadow-md py-4 w-full">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8">
-          <h1 className="text-xl font-bold text-blue-600">My Website</h1>
+          <h1 className="text-4xl font-bold text-blue-600">My Website</h1>
           <ul className="hidden md:flex space-x-6">
             <TopMenuItems />
           </ul>

@@ -6,13 +6,14 @@ const Home = () => {
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       {/* Hero Section */}
       <Banner
-        title="Welcome to Our Website"
-        subTitle=""
-        longText="Explore our services and offerings"
+        title="Secure Your Future Today"
+        longText="Comprehensive insurance solutions tailored to your needs."
       />
 
       {/* Features Section */}
-      <Features />
+      <div id="features">
+        <Features />
+      </div>
 
     </div>
   );

@@ -6,13 +6,14 @@ export default function Contact() {
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       {/* Hero Section */}
       <Banner
-        title="Welcome to Our Website"
-        subTitle="Contact"
-        longText="Get in touch with us today"
+        title="We’re Here to Help"
+        longText="Reach out with your questions, concerns, or feedback — we’re just a message away."
       />
 
       {/* Features Section */}
-      <Features />
+      <div id="features">
+        <Features />
+      </div>
     </div>
   );
 }

@@ -6,13 +6,14 @@ export default function About() {
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       {/* Hero Section */}
       <Banner
-        title="Welcome to Our Website"
-        subTitle="About"
-        longText="Learn more about our mission and values"
+        title="Built on Trust and Commitment"
+        longText="Delivering reliable insurance services backed by decades of experience."
       />
 
       {/* Features Section */}
-      <Features />
+      <div id="features">
+        <Features />
+      </div>
     </div>
   );
 }
