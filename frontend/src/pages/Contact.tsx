@@ -7,7 +7,7 @@ export default function Contact() {
       {/* Hero Section */}
       <Banner
         title="Welcome to Our Website"
-        subtitle="Contact"
+        subTitle="Contact"
         longText="Get in touch with us today"
       />
 

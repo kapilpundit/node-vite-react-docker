@@ -7,7 +7,7 @@ const Home = () => {
       {/* Hero Section */}
       <Banner
         title="Welcome to Our Website"
-        subtitle=""
+        subTitle=""
         longText="Explore our services and offerings"
       />
 

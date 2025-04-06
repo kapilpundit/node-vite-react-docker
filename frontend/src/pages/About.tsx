@@ -7,7 +7,7 @@ export default function About() {
       {/* Hero Section */}
       <Banner
         title="Welcome to Our Website"
-        subtitle="About"
+        subTitle="About"
         longText="Learn more about our mission and values"
       />
 

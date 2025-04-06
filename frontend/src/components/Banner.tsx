@@ -3,12 +3,11 @@ import bannerImage from "../assets/banner.jpg";
 
 interface BannerProps {
   title: string;
-  subtitle?: string;
+  subTitle?: string;
   longText?: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ title, subtitle = '', longText }) => {
-  console.log(subtitle)
+const Banner: React.FC<BannerProps> = ({ title, subTitle = '', longText }) => {
   return (
     <>
       {/* <section className="w-full py-20 min-h-[400px] bg-blue-600 text-white"> */}
@@ -22,9 +21,9 @@ const Banner: React.FC<BannerProps> = ({ title, subtitle = '', longText }) => {
         {/* Content Container */}
         <div className="relative max-w-7xl mx-auto px-8 py-10">
           <h2 className="text-5xl font-bold">{title}</h2>
-          {subtitle && (
-            <h3 className="text-3xl font-semibold mt-2">{subtitle}</h3>
-          )}
+          <h3 className="text-3xl font-semibold mt-2">
+            {subTitle.length === 0 ? '\u00A0' : subTitle}
+          </h3>
           {longText && <p className="text-xl mt-2">{longText}</p>}
           <a
             href="#"
