@@ -3,7 +3,6 @@ import bannerImage from "../assets/banner.jpg";
 
 interface BannerProps {
   title: string;
-  subTitle?: string;
   longText?: string;
 }
 

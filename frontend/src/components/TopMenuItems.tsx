@@ -14,20 +14,25 @@ const TopMenuItems = ({ onClick }: { onClick?: () => void }) => {
   useEffect(() => {
     const currentPath = menuLinks.find(link => link.path === location.pathname);
     document.title = currentPath?.title || 'Insurance Portal';
-  }, [location.pathname])
+  }, [location.pathname]);
 
   return (
     <>
       {
-        menuLinks.map((item) => (
-          <li
-            key={item.path}
-            onClick={onClick}
-            className="block px-3 py-3 rounded-md text-blue-600 hover:bg-blue-600 hover:!text-white transition duration-300"
-          >
-            <Link to={item.path}>{item.label}</Link>
-          </li>
-        )
+        menuLinks.map((item) => {
+          const isActive = location.pathname === item.path;
+          return (<li
+              key={item.path}
+              onClick={onClick}
+              className={`block px-3 py-3 rounded-md transition duration-300 ${
+                isActive ? "bg-blue-600 text-white"
+                : "text-blue-600 hover:bg-blue-600 hover:text-white"
+              }`}
+            >
+              <Link to={item.path}>{item.label}</Link>
+            </li>
+          )
+        }
       )}
     </>
   );

@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"; // Import the menu icon
 import TopMenuItems from "./TopMenuItems";
+import Footer from "./Footer";
 
 const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
       {/* Navbar */}
       <nav className="bg-white shadow-md py-4 w-full">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8">
-          <h1 className="text-4xl font-bold text-blue-600">My Website</h1>
+          <h1 className="text-4xl font-bold text-blue-300">Insurance</h1>
           <ul className="hidden md:flex space-x-6">
             <TopMenuItems />
           </ul>
@@ -48,11 +49,7 @@ const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-800 text-white py-6">
-        <p className="text-center">
-          &copy; 2025 My Website. All rights reserved.
-        </p>
-      </footer>
+      <Footer year="2025" name="Insurance Website" />
     </div>
   );
 };
